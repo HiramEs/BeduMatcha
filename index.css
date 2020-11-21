@@ -201,6 +201,7 @@ li {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    display: flex;
   }
   
   .publish > form p {
@@ -210,9 +211,7 @@ li {
 
   .features {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      height: 660px;
-      grid-template-rows: repeat(2, 1fr);
+      grid-template: repeat(2, 330px) / repeat(2, 1fr);
       background-color: #025157;
       padding: 5% 10%;
   }
@@ -275,4 +274,65 @@ li {
   .features .feature-card .feature-image img {
     margin-top: 0;
     height: 100%;
+  }
+
+  @media (max-width: 575px) {
+    .navbar, .actions {
+      display: none;
+    }
+
+    main {
+      margin-top: 130px;
+    }
+
+    h1 {
+      font-size: 30px;
+    }
+
+    .banner > img {
+      width: 100%;
+    }
+
+    .promo {
+      flex-direction: column;
+      max-width: 90%;
+    }
+  
+    .explanatory-video > video {
+      width: 100%;
+    }
+    
+    .publish {
+      margin-top: 10px;
+    }
+  
+    .publish > h3 {
+      font-size: 25px;
+      line-height: 1.2;
+    }
+
+    .publish > form {
+      flex-direction: column;
+    }
+  
+    .publish > form > div {
+      height: 50px;
+      margin-top: 10px;
+    }
+  
+    .publish > form > div > input {
+      width: 65%;
+    }
+
+    .features {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 1fr);
+      padding-left: 0;
+      padding-right: 0;
+      text-align: left;
+    }
+    
+    .feature-image {
+      display: none;
+    }
   }

@@ -6,6 +6,7 @@ body {
 main {
     margin-top: 285px;
     text-align: center;
+    position: relative;
 }
 
 h1 {
@@ -66,50 +67,18 @@ p {
     max-width: 100px;
 }
 
-.header {
-    margin-top: 40px;
-    margin-left: 20px;
-    margin-right: 20px;
-    font-size: 0;
-    height: 45px;
-}
-
-.fixed-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #fffbf7;
-  }
-
-.header > * {
-    /* box-sizing: border-box; */
-    display: inline-block;
-    font-size: 16px;
-    vertical-align: middle;
-    height: 100%;
-    line-height: 5px;
-}
-
 li {
     display: inline;
     margin-right: 25px;
     margin-left: 25px;
 }
 
-.logo {
-    width: 15%;
-}
-
-.logo > img {
-    height: 100%;
-}
-
 .navbar {
-    width: 70%;
     text-align: center;
     color: #025157;
     font-weight: 500;
+    background-color: #fffbf7;
+    margin-top: auto;
 }
 
 .navbar > * {
@@ -118,7 +87,6 @@ li {
 }
 
 .actions {
-    width: 15%;
     text-align: right;
     font-size: 14px;
     font-weight: 600;
@@ -276,10 +244,29 @@ li {
     height: 100%;
   }
 
+  .success-stories {
+    background-color: #a1d683;
+  }
+
+  .success-stories .stories-carousel .carousel-indicators {
+    position: initial; /** ó: position: static; */
+  }
+
+  .success-stories .stories-carousel .carousel {
+    max-width: 370px;
+  }
+  
+  .success-stories .stories-carousel .card {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+  }
+
+  .success-stories .stories-carousel figure {
+    margin-top: 0;
+  }
+
   @media (max-width: 575px) {
-    .navbar, .actions {
-      display: none;
-    }
 
     main {
       margin-top: 130px;
@@ -335,4 +322,18 @@ li {
     .feature-image {
       display: none;
     }
+
+    .navbar-light .nav-item .nav-link {
+      color: #025157;
+    }
+    
+    .navbar-light .navbar-toggler {
+      border-color: #025157;
+    }
+    
+    .navbar-light .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgb(3, 81, 77)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
   }
+
